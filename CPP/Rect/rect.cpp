@@ -16,7 +16,7 @@ rectangulo::rectangulo(int a, int b){
 		base = a;
 		altura = b;
 	}
-	cout << "Solo se pueden ingresar numeros Naturales"
+	cout << "Solo se pueden ingresar numeros Naturales";
 }
 
 bool rectangulo::cuad(){
@@ -26,5 +26,5 @@ bool rectangulo::cuad(){
 }
 
 void rectangulo::mostrar(){
-	
+	cout << "Rectangulo: " << base << "; " << altura;
 }
