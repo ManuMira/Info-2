@@ -9,9 +9,9 @@ class motor{
 	public:
 	motor(int Velocidad_Objetivo);
 	void set_Va(int Va);
-	int get_Va()const;
+	int get_Va();
 	void set_Vo(int Vo);
-	int get_Vo()const;
+	int get_Vo();
 	void Incrementar();
 	void Decrementar();
 }
