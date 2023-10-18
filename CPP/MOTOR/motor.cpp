@@ -10,8 +10,9 @@ motor::motor(int Vo){
 	if(Vo > 0){
 		Velocidad_Actual = 0;
 		Velocidad_Objetivo = Vo;
+	}else{
+		cout << "Solo se pueden asignar enteros positivos"
 	}
-	cout << "Solo se pueden asignar enteros positivos"
 }
 
 void motor::set_Va(int Va){
