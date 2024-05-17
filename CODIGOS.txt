@@ -1,0 +1,65 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    10:12:42 05/15/2024 
+// Design Name: 
+// Module Name:    T5_MiraManuel_F1 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module T5_MiraManuel_F1(
+    input iA,
+    input iB,
+    input iC,
+    output oF2
+    );
+	
+	assign oF2 = (~iA & ~iB & iC) | (iA & ~iB & iC) | (iA & iB & iC);
+
+endmodule
+
+module T5_MiraManuel_F2(
+    input iA,
+    input iB,
+    input iC,
+    output oF1
+    );
+
+	assign oF1 = (iA & iC) | (~iB & iC);
+
+endmodule
+
+module T5_MiraManuel_F3(
+    input iA,
+    input iB,
+    input iC,
+    output oF3
+    );
+
+	assign oF3 = (iA & ~iC) | (~iB & ~iC) | (iA & ~iB);
+
+endmodule
+
+
+
+module T5_MiraManuel_F4(
+    input iA,
+    input iB,
+    input iC,
+    output oF4
+    );
+
+	assign oF4 = (iA & ~iB & ~iC) | (~iA & ~iB & ~iC) | (iA & ~iB & iC) | (iA & iB & ~iC);
+
+endmodule
