@@ -1,0 +1,36 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    15:06:07 06/19/2024 
+// Design Name: 
+// Module Name:    Muxg 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module Muxg(CE, sel, inputs, oF);
+	input CE; //chip enable
+	input [1:0] sel; //selector
+	input [3:0] inputs;//Entradas
+	output [3:0] oF; //Salida
+	reg [3:0] oF;
+	
+	always@(*) begin
+		case (sel)
+			2'b00: oF = inputs[0];
+			2'b01: oF = inputs[1];
+			2'b10: oF = inputs[2];
+			2'b11: oF = inputs[3];
+		endcase
+	end
+endmodule
